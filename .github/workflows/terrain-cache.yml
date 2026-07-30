@@ -1,0 +1,42 @@
+name: Advance terrain cache
+
+on:
+  schedule:
+    - cron: "2-57/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: eclipse-terrain-cache
+  cancel-in-progress: false
+
+jobs:
+  advance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Keep the backend terrain builder moving
+        shell: bash
+        run: |
+          set -euo pipefail
+          status_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/status?version=2"
+          prewarm_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/prewarm?version=2"
+
+          for attempt in $(seq 1 8); do
+            payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
+            state="$(jq -r '.status // "error"' <<<"$payload")"
+            jq -r '"Terrain cache: \(.completedSamples)/\(.totalSamples) samples · \(.completedTiles)/\(.totalTiles) tiles · \(.activity)"' <<<"$payload"
+
+            if [[ "$state" == "ready" ]]; then
+              exit 0
+            fi
+            if [[ "$state" == "error" ]]; then
+              jq -r '.error // "The terrain cache stopped with an unknown error."' <<<"$payload" >&2
+              exit 1
+            fi
+
+            curl --fail --silent --show-error --max-time 30 "$prewarm_url" >/dev/null
+            sleep 30
+          done
