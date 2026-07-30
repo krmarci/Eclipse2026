@@ -15,14 +15,20 @@ concurrency:
 jobs:
   advance:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 345
+
     steps:
       - name: Keep the backend terrain builder moving
         shell: bash
         run: |
           set -euo pipefail
+
           status_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/status?version=2"
           prewarm_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/prewarm?version=2"
+
+          # Stop after 5 h 35 min, leaving ten minutes before GitHub's hard limit.
+          stop_at=$((SECONDS + 20100))
+          batch_count=0
 
           progress_signature() {
             jq -r '[
@@ -38,14 +44,24 @@ jobs:
             ] | @tsv'
           }
 
-          for attempt in $(seq 1 8); do
-            payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
+          log_status() {
+            jq -r '"Terrain cache: \(.completedSamples)/\(.totalSamples) samples · \(.completedTiles)/\(.totalTiles) tiles · \(.activity)"' <<<"$1"
+          }
+
+          payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
+          log_status "$payload"
+
+          last_logged_tiles="$(jq -r '.completedTiles' <<<"$payload")"
+          last_logged_scale="$(jq -r '.activeScaleMetres // 0' <<<"$payload")"
+
+          while (( SECONDS < stop_at )); do
             state="$(jq -r '.status // "error"' <<<"$payload")"
-            jq -r '"Terrain cache: \(.completedSamples)/\(.totalSamples) samples · \(.completedTiles)/\(.totalTiles) tiles · \(.activity)"' <<<"$payload"
 
             if [[ "$state" == "ready" ]]; then
+              log_status "$payload"
               exit 0
             fi
+
             if [[ "$state" == "error" ]]; then
               jq -r '.error // "The terrain cache stopped with an unknown error."' <<<"$payload" >&2
               exit 1
@@ -55,23 +71,41 @@ jobs:
             curl --fail --silent --show-error --max-time 30 "$prewarm_url" >/dev/null
 
             advanced=false
+
             for poll in $(seq 1 18); do
               sleep 10
+
               payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
               state="$(jq -r '.status // "error"' <<<"$payload")"
-              after="$(progress_signature <<<"$payload")"
 
               if [[ "$state" == "ready" ]]; then
-                jq -r '"Terrain cache: \(.completedSamples)/\(.totalSamples) samples · \(.completedTiles)/\(.totalTiles) tiles · \(.activity)"' <<<"$payload"
+                log_status "$payload"
                 exit 0
               fi
+
               if [[ "$state" == "error" ]]; then
                 jq -r '.error // "The terrain cache stopped with an unknown error."' <<<"$payload" >&2
                 exit 1
               fi
+
+              after="$(progress_signature <<<"$payload")"
+
               if [[ "$after" != "$before" ]]; then
-                jq -r '"Terrain cache advanced: \(.completedSamples)/\(.totalSamples) samples · \(.completedTiles)/\(.totalTiles) tiles · \(.activity)"' <<<"$payload"
                 advanced=true
+                ((batch_count += 1))
+
+                completed_tiles="$(jq -r '.completedTiles' <<<"$payload")"
+                active_scale="$(jq -r '.activeScaleMetres // 0' <<<"$payload")"
+
+                if (( batch_count % 25 == 0 )) ||
+                  [[ "$completed_tiles" != "$last_logged_tiles" ]] ||
+                  [[ "$active_scale" != "$last_logged_scale" ]]; then
+
+                  log_status "$payload"
+                  last_logged_tiles="$completed_tiles"
+                  last_logged_scale="$active_scale"
+                fi
+
                 break
               fi
             done
@@ -81,3 +115,7 @@ jobs:
               exit 1
             fi
           done
+
+          payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
+          log_status "$payload"
+          echo "The runner reached its safe time limit. A later run can resume from this persisted state."
