@@ -30,6 +30,19 @@ jobs:
           stop_at=$((SECONDS + 20100))
           batch_count=0
 
+          # A short edge-network reset should not discard hours of persistent
+          # terrain-cache progress. Retry every curl call before failing the run.
+          curl_json() {
+            curl --fail --silent --show-error --max-time 30 \
+              --retry 5 --retry-delay 3 --retry-all-errors "$1"
+          }
+
+          trigger_prewarm() {
+            curl --fail --silent --show-error --max-time 30 \
+              --retry 5 --retry-delay 3 --retry-all-errors \
+              "$prewarm_url" >/dev/null
+          }
+
           progress_signature() {
             jq -r '[
               .status,
@@ -48,7 +61,7 @@ jobs:
             jq -r '"Terrain cache: \(.completedSamples)/\(.totalSamples) samples · \(.completedTiles)/\(.totalTiles) tiles · \(.activity)"' <<<"$1"
           }
 
-          payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
+          payload="$(curl_json "$status_url")"
           log_status "$payload"
 
           last_logged_tiles="$(jq -r '.completedTiles' <<<"$payload")"
@@ -68,14 +81,14 @@ jobs:
             fi
 
             before="$(progress_signature <<<"$payload")"
-            curl --fail --silent --show-error --max-time 30 "$prewarm_url" >/dev/null
+            trigger_prewarm
 
             advanced=false
 
             for poll in $(seq 1 18); do
               sleep 10
 
-              payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
+              payload="$(curl_json "$status_url")"
               state="$(jq -r '.status // "error"' <<<"$payload")"
 
               if [[ "$state" == "ready" ]]; then
@@ -116,6 +129,6 @@ jobs:
             fi
           done
 
-          payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
+          payload="$(curl_json "$status_url")"
           log_status "$payload"
           echo "The runner reached its safe time limit. A later run can resume from this persisted state."
