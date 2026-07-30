@@ -15,7 +15,7 @@ concurrency:
 jobs:
   advance:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - name: Keep the backend terrain builder moving
         shell: bash
@@ -23,6 +23,20 @@ jobs:
           set -euo pipefail
           status_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/status?version=2"
           prewarm_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/prewarm?version=2"
+
+          progress_signature() {
+            jq -r '[
+              .status,
+              .completedSamples,
+              .completedTiles,
+              .activeScaleMetres,
+              (.activeTile.z // -1),
+              (.activeTile.x // -1),
+              (.activeTile.y // -1),
+              .activeTileCompletedSamples,
+              .updatedAtUtc
+            ] | @tsv'
+          }
 
           for attempt in $(seq 1 8); do
             payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
@@ -37,6 +51,33 @@ jobs:
               exit 1
             fi
 
+            before="$(progress_signature <<<"$payload")"
             curl --fail --silent --show-error --max-time 30 "$prewarm_url" >/dev/null
-            sleep 30
+
+            advanced=false
+            for poll in $(seq 1 18); do
+              sleep 10
+              payload="$(curl --fail --silent --show-error --max-time 30 "$status_url")"
+              state="$(jq -r '.status // "error"' <<<"$payload")"
+              after="$(progress_signature <<<"$payload")"
+
+              if [[ "$state" == "ready" ]]; then
+                jq -r '"Terrain cache: \(.completedSamples)/\(.totalSamples) samples · \(.completedTiles)/\(.totalTiles) tiles · \(.activity)"' <<<"$payload"
+                exit 0
+              fi
+              if [[ "$state" == "error" ]]; then
+                jq -r '.error // "The terrain cache stopped with an unknown error."' <<<"$payload" >&2
+                exit 1
+              fi
+              if [[ "$after" != "$before" ]]; then
+                jq -r '"Terrain cache advanced: \(.completedSamples)/\(.totalSamples) samples · \(.completedTiles)/\(.totalTiles) tiles · \(.activity)"' <<<"$payload"
+                advanced=true
+                break
+              fi
+            done
+
+            if [[ "$advanced" != "true" ]]; then
+              echo "Terrain cache did not advance within 180 seconds." >&2
+              exit 1
+            fi
           done
