@@ -23,8 +23,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          status_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/status?version=2"
-          prewarm_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/prewarm?version=2"
+          status_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/status?version=3"
+          prewarm_url="https://spain-eclipse-map.krmarci.chatgpt.site/api/terrain-overlay/multiscale/prewarm?version=3"
 
           # Stop after 5 h 35 min, leaving ten minutes before GitHub's hard limit.
           stop_at=$((SECONDS + 20100))
