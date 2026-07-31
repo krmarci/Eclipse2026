@@ -2,7 +2,7 @@ name: Advance terrain cache
 
 on:
   schedule:
-    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
+    - cron: "2,17,32,47 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -29,9 +29,9 @@ jobs:
           # Stop after 5 h 35 min, leaving ten minutes before GitHub's hard limit.
           stop_at=$((SECONDS + 20100))
           batch_count=0
+          consecutive_stalls=0
+          payload=""
 
-          # A short edge-network reset should not discard hours of persistent
-          # terrain-cache progress. Retry every curl call before failing the run.
           curl_json() {
             curl --fail --silent --show-error --max-time 30 \
               --retry 5 --retry-delay 3 --retry-all-errors "$1"
@@ -45,29 +45,49 @@ jobs:
 
           progress_signature() {
             jq -r '[
-              .status,
               .completedSamples,
               .completedTiles,
               .activeScaleMetres,
               (.activeTile.z // -1),
               (.activeTile.x // -1),
               (.activeTile.y // -1),
-              .activeTileCompletedSamples,
-              .updatedAtUtc
+              .activeTileCompletedSamples
             ] | @tsv'
+          }
+
+          is_transient_error() {
+            local message="${1,,}"
+            [[ "$message" == *"(10001)"* ]] ||
+              [[ "$message" == *"(10043)"* ]] ||
+              [[ "$message" == *"internal error"* ]] ||
+              [[ "$message" == *"operation was aborted"* ]] ||
+              [[ "$message" == *"temporarily unavailable"* ]] ||
+              [[ "$message" == *"timed out"* ]] ||
+              [[ "$message" == *"timeout"* ]] ||
+              [[ "$message" == *"connection reset"* ]] ||
+              [[ "$message" == *"connection closed"* ]]
           }
 
           log_status() {
             jq -r '"Terrain cache: \(.completedSamples)/\(.totalSamples) samples · \(.completedTiles)/\(.totalTiles) tiles · \(.activity)"' <<<"$1"
           }
 
-          payload="$(curl_json "$status_url")"
-          log_status "$payload"
-
-          last_logged_tiles="$(jq -r '.completedTiles' <<<"$payload")"
-          last_logged_scale="$(jq -r '.activeScaleMetres // 0' <<<"$payload")"
+          last_logged_tiles=-1
+          last_logged_scale=-1
 
           while (( SECONDS < stop_at )); do
+            if [[ -z "$payload" ]]; then
+              if ! payload="$(curl_json "$status_url")"; then
+                echo "Terrain status endpoint was temporarily unavailable; retrying in 30 seconds." >&2
+                trigger_prewarm || true
+                sleep 30
+                continue
+              fi
+              log_status "$payload"
+              last_logged_tiles="$(jq -r '.completedTiles // -1' <<<"$payload")"
+              last_logged_scale="$(jq -r '.activeScaleMetres // -1' <<<"$payload")"
+            fi
+
             state="$(jq -r '.status // "error"' <<<"$payload")"
 
             if [[ "$state" == "ready" ]]; then
@@ -76,19 +96,32 @@ jobs:
             fi
 
             if [[ "$state" == "error" ]]; then
-              jq -r '.error // "The terrain cache stopped with an unknown error."' <<<"$payload" >&2
+              message="$(jq -r '.error // "The terrain cache stopped with an unknown error."' <<<"$payload")"
+              if is_transient_error "$message"; then
+                echo "Recoverable terrain-cache error: $message" >&2
+                trigger_prewarm || true
+                payload=""
+                sleep 30
+                continue
+              fi
+              echo "$message" >&2
               exit 1
             fi
 
             before="$(progress_signature <<<"$payload")"
-            trigger_prewarm
-
+            trigger_prewarm || true
             advanced=false
+            recoverable_error=false
 
             for poll in $(seq 1 18); do
               sleep 10
 
-              payload="$(curl_json "$status_url")"
+              if ! payload="$(curl_json "$status_url")"; then
+                echo "Terrain status poll failed; continuing within the current recovery window." >&2
+                payload=""
+                continue
+              fi
+
               state="$(jq -r '.status // "error"' <<<"$payload")"
 
               if [[ "$state" == "ready" ]]; then
@@ -97,7 +130,15 @@ jobs:
               fi
 
               if [[ "$state" == "error" ]]; then
-                jq -r '.error // "The terrain cache stopped with an unknown error."' <<<"$payload" >&2
+                message="$(jq -r '.error // "The terrain cache stopped with an unknown error."' <<<"$payload")"
+                if is_transient_error "$message"; then
+                  echo "Recoverable terrain-cache error: $message" >&2
+                  trigger_prewarm || true
+                  payload=""
+                  recoverable_error=true
+                  break
+                fi
+                echo "$message" >&2
                 exit 1
               fi
 
@@ -105,6 +146,7 @@ jobs:
 
               if [[ "$after" != "$before" ]]; then
                 advanced=true
+                consecutive_stalls=0
                 ((batch_count += 1))
 
                 completed_tiles="$(jq -r '.completedTiles' <<<"$payload")"
@@ -118,17 +160,29 @@ jobs:
                   last_logged_tiles="$completed_tiles"
                   last_logged_scale="$active_scale"
                 fi
-
                 break
               fi
             done
 
+            if [[ "$recoverable_error" == "true" ]]; then
+              sleep 30
+              continue
+            fi
+
             if [[ "$advanced" != "true" ]]; then
-              echo "Terrain cache did not advance within 180 seconds." >&2
-              exit 1
+              ((consecutive_stalls += 1))
+              echo "Terrain cache did not advance within 180 seconds (recovery window ${consecutive_stalls}/5)." >&2
+              trigger_prewarm || true
+              payload=""
+              if (( consecutive_stalls >= 5 )); then
+                echo "Terrain cache did not advance after five recovery windows." >&2
+                exit 1
+              fi
+              sleep $((consecutive_stalls * 30))
             fi
           done
 
-          payload="$(curl_json "$status_url")"
-          log_status "$payload"
+          if payload="$(curl_json "$status_url")"; then
+            log_status "$payload"
+          fi
           echo "The runner reached its safe time limit. A later run can resume from this persisted state."
