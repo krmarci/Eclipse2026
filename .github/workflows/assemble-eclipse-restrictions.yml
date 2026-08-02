@@ -1,0 +1,70 @@
+name: Assemble eclipse restriction datasets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/eclipse-restrictions-upload/READY
+
+permissions:
+  contents: write
+
+concurrency:
+  group: assemble-eclipse-restrictions
+  cancel-in-progress: false
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and validate datasets
+        shell: bash
+        run: |
+          set -euo pipefail
+          upload_dir=".github/eclipse-restrictions-upload"
+          output_dir="data/restrictions"
+          mkdir -p "$output_dir"
+
+          base64 --decode "$upload_dir/geojson.gz.b64" | gzip --decompress > "$output_dir/spain_eclipse_restrictions_2026-08-02.geojson"
+          base64 --decode "$upload_dir/csv.gz.b64" | gzip --decompress > "$output_dir/spain_eclipse_restrictions_2026-08-02.csv"
+
+          python - <<'PY'
+          import csv
+          import json
+          from pathlib import Path
+
+          root = Path("data/restrictions")
+          geojson_path = root / "spain_eclipse_restrictions_2026-08-02.geojson"
+          csv_path = root / "spain_eclipse_restrictions_2026-08-02.csv"
+
+          data = json.loads(geojson_path.read_text(encoding="utf-8"))
+          if data.get("type") != "FeatureCollection":
+              raise SystemExit("GeoJSON is not a FeatureCollection")
+          feature_count = len(data.get("features", []))
+
+          with csv_path.open("r", encoding="utf-8-sig", newline="") as handle:
+              row_count = sum(1 for _ in csv.DictReader(handle))
+
+          if feature_count != 83 or row_count != 83:
+              raise SystemExit(f"Unexpected record counts: GeoJSON={feature_count}, CSV={row_count}")
+          print(f"Validated {feature_count} GeoJSON features and {row_count} CSV rows")
+          PY
+
+      - name: Commit reconstructed files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .github/eclipse-restrictions-upload
+          rm -f .github/workflows/assemble-eclipse-restrictions.yml
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/restrictions .github/eclipse-restrictions-upload .github/workflows/assemble-eclipse-restrictions.yml
+          git commit -m "Add eclipse restriction datasets"
+          git push
