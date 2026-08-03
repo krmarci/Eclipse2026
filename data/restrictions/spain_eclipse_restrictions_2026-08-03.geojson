@@ -1,0 +1,4528 @@
+{
+  "type": "FeatureCollection",
+  "name": "Spain total solar eclipse access and activity restrictions — 12 August 2026",
+  "metadata": {
+    "snapshot_time": "2026-08-03T08:40:00+02:00",
+    "scope": "Published restrictions and announced controls relevant to reaching or using eclipse-viewing locations in Spain's 12 August 2026 eclipse corridor.",
+    "important_limit": "This is a snapshot, not a guarantee of completeness on eclipse day. No material changes were found in the fresh review on 3 August 2026; wildfire orders, police controls, capacity closures and municipal measures can still change at short notice.",
+    "geometry_policy": "GeoJSON geometry is null when the issuing authority did not publish a polygon/coordinate or when geocoding would risk falsely narrowing a legal restriction. Use properties.map_query, road_code and road_reference for geocoding or matching to an authoritative road/land dataset.",
+    "status_policy": {
+      "confirmed": "Published by an official authority.",
+      "planned_not_final": "Officially announced as proposed/expected, but final detailed order still pending.",
+      "reported_confirmed": "Reported by reputable media as an authority-announced measure; primary order/page not located.",
+      "provisional_confirmed_list": "Authority-origin list reported as provisional and still subject to updates.",
+      "confirmed_framework_details_pending": "Official framework exists, but exact local control points/hours are pending."
+    },
+    "excluded_from_features": [
+      "Generic safety advice and non-binding recommendations.",
+      "National or regional special-traffic-plan designations that authorize future controls but do not themselves close a place.",
+      "Conditional wildfire-access mechanisms not active specifically for 12 August at snapshot time.",
+      "Temporary current wildfire closures with no evidence they will remain active on 12 August.",
+      "Possible Castilla-La Mancha exclusion zones that have not yet been named or finalized."
+    ],
+    "jurisdictions_reviewed": [
+      {
+        "community": "Galicia",
+        "result": "29 provisional named exclusion points included."
+      },
+      {
+        "community": "Asturias",
+        "result": "No fixed eclipse-day access/area closure located in the reviewed official sources as of snapshot."
+      },
+      {
+        "community": "Cantabria",
+        "result": "Regionwide fire-related activity suspension included; no general mountain/forest entry ban found."
+      },
+      {
+        "community": "País Vasco / Euskadi",
+        "result": "Heavy-vehicle road-network ban included; no passenger-car viewing-area ban found."
+      },
+      {
+        "community": "Navarra",
+        "result": "Heavy-goods-vehicle road-network ban included; forest-track avoidance remains advice, not a blanket legal entry ban."
+      },
+      {
+        "community": "La Rioja",
+        "result": "Forest-land internal-combustion vehicle ban included."
+      },
+      {
+        "community": "Castilla y León",
+        "result": "No fixed eclipse-wide mountain/forest entry ban or named exclusion list located as of snapshot."
+      },
+      {
+        "community": "Comunidad de Madrid",
+        "result": "No fixed eclipse-day access/area closure located as of snapshot."
+      },
+      {
+        "community": "Castilla-La Mancha",
+        "result": "Possible exclusion zones are under analysis, but no named final list was published; therefore none included."
+      },
+      {
+        "community": "Aragón",
+        "result": "Zaragoza city rules and planned bridge/footbridge closures included. No verified autonomous-community-wide mountain ban included."
+      },
+      {
+        "community": "Catalunya",
+        "result": "Heavy-vehicle corridor restrictions, municipal access-regulation framework and Ebro Observatory closure included."
+      },
+      {
+        "community": "Comunitat Valenciana",
+        "result": "L'Albufera/Devesa closure and CV-500/El Palmar access controls included from municipal-announcement reporting."
+      },
+      {
+        "community": "Illes Balears",
+        "result": "Official island-by-island access-control table and special municipal closures included."
+      }
+    ],
+    "source_registry": {
+      "balearics_official": {
+        "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+        "publisher": "Govern de les Illes Balears",
+        "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+        "tier": "official",
+        "last_updated": "2026-07-31"
+      },
+      "zaragoza_official": {
+        "title": "Zaragoza prepara un gran dispositivo especial de seguridad, movilidad y acogida turística",
+        "publisher": "Ayuntamiento de Zaragoza",
+        "url": "https://www.zaragoza.es/sede/portal/zaragoza-eclipsa/servicio/noticia/359827",
+        "tier": "official",
+        "last_updated": "2026-07-22"
+      },
+      "galicia_ep": {
+        "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+        "publisher": "Europa Press Galicia",
+        "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+        "tier": "reputable_media_quoting_authorities",
+        "last_updated": "2026-07-28"
+      },
+      "galicia_ser": {
+        "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+        "publisher": "Cadena SER Galicia",
+        "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+        "tier": "reputable_media_quoting_authorities",
+        "last_updated": "2026-07-28"
+      },
+      "larioja_official": {
+        "title": "Observación Segura del Eclipse Solar en La Rioja",
+        "publisher": "Gobierno de La Rioja",
+        "url": "https://web.larioja.org/eclipse/",
+        "tier": "official",
+        "last_updated": "2026-08-02"
+      },
+      "larioja_ser": {
+        "title": "El Gobierno de La Rioja lanza varias medidas extraordinarias para evitar incendios el día del eclipse",
+        "publisher": "Cadena SER Radio Rioja",
+        "url": "https://cadenaser.com/rioja/2026/07/30/el-gobierno-de-la-rioja-lanza-varias-medidas-extraordinarias-para-evitar-incendios-el-dia-del-eclipse-radio-rioja/",
+        "tier": "reputable_media_quoting_government_official",
+        "last_updated": "2026-07-30"
+      },
+      "catalonia_official": {
+        "title": "Dispositiu per l'eclipsi solar",
+        "publisher": "Generalitat de Catalunya",
+        "url": "https://web.gencat.cat/ca/inici/actualitat/dispositiu-eclpisi-solar-12-agost",
+        "tier": "official",
+        "last_updated": "2026-08-01"
+      },
+      "ebre_official": {
+        "title": "L’Observatori de l’Ebre tindrà un paper destacat en l’eclipsi solar total",
+        "publisher": "Observatori de l'Ebre / Generalitat de Catalunya",
+        "url": "https://observatoriebre.gencat.cat/en/detalls/noticia/20250527-eclipsi-solar-total-2026",
+        "tier": "official",
+        "last_updated": "2026-04-23"
+      },
+      "euskadi_official": {
+        "title": "El Gobierno Vasco limita la restricción de circulación por el eclipse a los vehículos pesados",
+        "publisher": "Gobierno Vasco / Irekia",
+        "url": "https://www.irekia.euskadi.eus/es/news/112148-gobierno-vasco-limita-restriccion-circulacion-por-eclipse-los-vehiculos-pesados-las-horas-mayor-intensidad-trafico-tras-reunirse-con-sector-del-transporte",
+        "tier": "official",
+        "last_updated": "2026-07-24"
+      },
+      "navarra_official": {
+        "title": "El dispositivo de seguridad desplegado para el día del eclipse en Navarra",
+        "publisher": "Gobierno de Navarra",
+        "url": "https://navarramasvoluntaria.navarra.es/es/noticias/el-dispositivo-de-seguridad-desplegado-para-el-dia-del-eclipse-en-navarra-estara-formado-por-1-165-personas",
+        "tier": "official",
+        "last_updated": "2026-07-27"
+      },
+      "cantabria_legal": {
+        "title": "Resolución por la que se establecen prohibiciones y suspensiones de determinadas actividades",
+        "publisher": "Gobierno de Cantabria (republished by Noticias Jurídicas)",
+        "url": "https://noticias.juridicas.com/base_datos/CCAA/1003100-r-desarrollo-rural-ganaderia-pesca-y-alimentacion-12-jun-2026-ca-cantabria.html",
+        "tier": "legal_republication",
+        "last_updated": "2026-06-12"
+      },
+      "valencia_ser": {
+        "title": "Dispositivo de seguridad por el eclipse en València: se cerrará la Albufera",
+        "publisher": "Cadena SER Radio Valencia",
+        "url": "https://cadenaser.com/comunitat-valenciana/2026/07/28/dispositivo-de-seguridad-por-el-eclipse-en-valencia-se-cerrara-la-albufera-y-habra-mas-de-mil-policias-vigilando-radio-valencia/",
+        "tier": "reputable_media_quoting_municipal_authorities",
+        "last_updated": "2026-07-28"
+      }
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-ac-01",
+        "name": "Torre de Hércules",
+        "autonomous_community": "Galicia",
+        "province": "A Coruña",
+        "municipality": "A Coruña",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Torre de Hércules, A Coruña, A Coruña, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-ac-02",
+        "name": "Illas de San Pedro",
+        "autonomous_community": "Galicia",
+        "province": "A Coruña",
+        "municipality": "A Coruña",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Illas de San Pedro, A Coruña, A Coruña, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-ac-03",
+        "name": "Praia do Pedrido",
+        "autonomous_community": "Galicia",
+        "province": "A Coruña",
+        "municipality": "Bergondo",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Praia do Pedrido, Bergondo, A Coruña, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-ac-04",
+        "name": "Miradoiro de Cabana",
+        "autonomous_community": "Galicia",
+        "province": "A Coruña",
+        "municipality": null,
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Miradoiro de Cabana, A Coruña, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-ac-05",
+        "name": "A Berberecheira",
+        "autonomous_community": "Galicia",
+        "province": "A Coruña",
+        "municipality": null,
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "A Berberecheira, A Coruña, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-ac-06",
+        "name": "Praia de Carnota",
+        "autonomous_community": "Galicia",
+        "province": "A Coruña",
+        "municipality": "Carnota",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Praia de Carnota, Carnota, A Coruña, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-ac-07",
+        "name": "Monte Pindo",
+        "autonomous_community": "Galicia",
+        "province": "A Coruña",
+        "municipality": "Carnota",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Monte Pindo, Carnota, A Coruña, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-ac-08",
+        "name": "As Furnas",
+        "autonomous_community": "Galicia",
+        "province": "A Coruña",
+        "municipality": "Oleiros",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "As Furnas, Oleiros, A Coruña, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-01",
+        "name": "Castelo de Castro de Ouro",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Alfoz",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Castelo de Castro de Ouro, Alfoz, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-02",
+        "name": "A Anguieira",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Barreiros",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "A Anguieira, Barreiros, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-03",
+        "name": "Monte Comado",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Barreiros",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Monte Comado, Barreiros, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-04",
+        "name": "Monte Cornería",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Barreiros",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Monte Cornería, Barreiros, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-05",
+        "name": "Monte Pebanor",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Barreiros",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Monte Pebanor, Barreiros, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-06",
+        "name": "Santo Estevo do Ermo",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Barreiros",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Santo Estevo do Ermo, Barreiros, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-07",
+        "name": "Explanada do Parque dos Condes",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Monforte de Lemos",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Explanada do Parque dos Condes, Monforte de Lemos, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-08",
+        "name": "Miradoiro de Tixoso",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "O Vicedo",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Miradoiro de Tixoso, O Vicedo, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-09",
+        "name": "Ponte do Río Sor",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "O Vicedo",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Ponte do Río Sor, O Vicedo, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-10",
+        "name": "Miradoiro das Laxes",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "O Vicedo",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Miradoiro das Laxes, O Vicedo, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-11",
+        "name": "Ponte do Porto",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "O Vicedo",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Ponte do Porto, O Vicedo, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-12",
+        "name": "Miradoiro de Moreiras",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "O Vicedo",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Miradoiro de Moreiras, O Vicedo, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-13",
+        "name": "Fuciño do Porco",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "O Vicedo",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Fuciño do Porco, O Vicedo, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-14",
+        "name": "Zona próxima á Ermida de San Marcos",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Sarria",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Zona próxima á Ermida de San Marcos, Sarria, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-15",
+        "name": "Acantilados de Papel",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Xove",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Acantilados de Papel, Xove, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-16",
+        "name": "Punta da Mansa",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Xove",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Punta da Mansa, Xove, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-lu-17",
+        "name": "Faro Roncadoiro",
+        "autonomous_community": "Galicia",
+        "province": "Lugo",
+        "municipality": "Xove",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Faro Roncadoiro, Xove, Lugo, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-ou-01",
+        "name": "Pista de montaña no Miradoiro de San Martín",
+        "autonomous_community": "Galicia",
+        "province": "Ourense",
+        "municipality": "A Rúa",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Pista de montaña no Miradoiro de San Martín, A Rúa, Ourense, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-po-01",
+        "name": "Xestoso",
+        "autonomous_community": "Galicia",
+        "province": "Pontevedra",
+        "municipality": "Silleda",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Xestoso, Silleda, Pontevedra, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-po-02",
+        "name": "Fervenza do Toxa",
+        "autonomous_community": "Galicia",
+        "province": "Pontevedra",
+        "municipality": "Silleda",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Fervenza do Toxa, Silleda, Pontevedra, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "gal-po-03",
+        "name": "Monte da Guía",
+        "autonomous_community": "Galicia",
+        "province": "Pontevedra",
+        "municipality": "Vigo",
+        "island": null,
+        "restriction_class": "eclipse_observation_exclusion",
+        "status": "provisional_confirmed_list",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact hours and boundary not published."
+        },
+        "description": "Observation of the eclipse is prohibited at this named exclusion point. The 29-point list was described as provisional.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Monte da Guía, Vigo, Pontevedra, Galicia, Spain",
+        "parent_rule": null,
+        "notes": "No polygon or precise perimeter was published; do not infer that only a single map pin is excluded.",
+        "sources": [
+          {
+            "title": "A Torre de Hércules, Monte Pindo e Fuciño do Porco, entre os 29 puntos de exclusión",
+            "publisher": "Europa Press Galicia",
+            "url": "https://www.europapress.es/galego/noticia-torre-hercules-monte-pindo-fucino-do-porco-os-29-puntos-exclusion-eclipse-20260728154101.html",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ep"
+          },
+          {
+            "title": "Las zonas prohibidas para el eclipse de sol en Galicia",
+            "publisher": "Cadena SER Galicia",
+            "url": "https://cadenaser.com/galicia/2026/07/28/las-zonas-prohibidas-para-el-eclipse-de-sol-donde-no-se-podra-ver-la-cita-del-12-de-agosto-en-galicia-radio-galicia/",
+            "tier": "reputable_media_quoting_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "galicia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-01",
+        "name": "Sant Elm access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Andratx",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-1030",
+        "road_reference": "Roundabout from s'Arracó to Sant Elm, at Ma-1050 junction",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-1030, Roundabout from s'Arracó to Sant Elm, at Ma-1050 junction, Andratx, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-02",
+        "name": "Andratx Ma-10 access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Andratx",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Ma-10 / Ma-1031 roundabout",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Ma-10 / Ma-1031 roundabout, Andratx, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-03",
+        "name": "Cala Estellencs access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Estellencs",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Camí des Port / Cala Estellencs access",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Camí des Port / Cala Estellencs access, Estellencs, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-04",
+        "name": "Cala Banyalbufar access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Banyalbufar",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Camí des Molí / Cala Banyalbufar access",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Camí des Molí / Cala Banyalbufar access, Banyalbufar, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-05",
+        "name": "Esporles Ma-10 controls",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Esporles",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Ma-1100 / Ma-1101 and Ma-10 / Ma-1100 junctions",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Ma-1100 / Ma-1101 and Ma-10 / Ma-1100 junctions, Esporles, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-06",
+        "name": "Valldemossa Ma-10 access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Valldemossa",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Ma-10 from Ma-1130",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Ma-10 from Ma-1130, Valldemossa, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-07",
+        "name": "Deià coastal accesses",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Deià",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Camí de Sa Cala, Cala Deià road and Sa Foradada access",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Camí de Sa Cala, Cala Deià road and Sa Foradada access, Deià, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-08",
+        "name": "Sóller Ma-10 controls",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Sóller",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Monument roundabout and Ma-10 / Ma-11 junction",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Monument roundabout and Ma-10 / Ma-11 junction, Sóller, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-09",
+        "name": "Fornalutx Ma-10 access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Fornalutx",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Diversion at km 47.500, junction with Ma-2120",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Diversion at km 47.500, junction with Ma-2120, Fornalutx, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-10",
+        "name": "Escorca Ma-10 access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Escorca",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Ma-2141 / Ma-10 junction",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Ma-2141 / Ma-10 junction, Escorca, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-11",
+        "name": "Caimari Ma-10 closure",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Selva",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-10",
+        "road_reference": "Closure from Caimari at Ma-2130 / Creu de Caimari",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-10, Closure from Caimari at Ma-2130 / Creu de Caimari, Selva, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-12",
+        "name": "Formentor access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Pollença",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-2210",
+        "road_reference": "Ma-10 km 0 resident-only toward Ma-10; Ma-2210 / Ma-2200 toward Mirador des Colomer and Formentor lighthouse",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-2210, Ma-10 km 0 resident-only toward Ma-10; Ma-2210 / Ma-2200 toward Mirador des Colomer and Formentor lighthouse, Pollença, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-13",
+        "name": "Maioris / Puig de Ros urbanization accesses",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Llucmajor",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-6014",
+        "road_reference": "km 6.200 and km 7.000",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-6014, km 6.200 and km 7.000, Llucmajor, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-14",
+        "name": "Cap Blanc access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Llucmajor",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-6014",
+        "road_reference": "km 18.000",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-6014, km 18.000, Llucmajor, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-15",
+        "name": "Santuari de Cura ascent",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Algaida",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-5018",
+        "road_reference": "Restriction from start of Ma-5018",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-5018, Restriction from start of Ma-5018, Algaida, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-16",
+        "name": "Platja de Palma road and parking controls",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Palma",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T08:00:00+02:00",
+          "end": null,
+          "time_note": "08:00–12:00 accredited access only; from 12:00 wider vehicle closure, subject to published exceptions."
+        },
+        "description": "Traffic and parking are restricted in Platja de Palma; Ma-19 exits 6, 7A, 8, 11 and 12 toward Llucmajor are closed under the staged access regime.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-19",
+        "road_reference": "Exits 6, 7A, 8, 11 and 12 toward Llucmajor; wider beach-zone controls",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-19, Exits 6, 7A, 8, 11 and 12 toward Llucmajor; wider beach-zone controls, Palma, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-17",
+        "name": "Puig de Sant Salvador ascent",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Felanitx",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-4011",
+        "road_reference": "km 1.000",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-4011, km 1.000, Felanitx, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-18",
+        "name": "Ermita de Betlem access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Artà",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-3333",
+        "road_reference": "km 5.000",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-3333, km 5.000, Artà, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-19",
+        "name": "Ermita de Bonany ascent",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Petra",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": null,
+        "road_reference": "Start of ascent at Camí de Son Torrat",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Start of ascent at Camí de Son Torrat, Petra, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-20",
+        "name": "Faro de ses Salines access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Ses Salines",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-6110",
+        "road_reference": "Restriction from start of road",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-6110, Restriction from start of road, Ses Salines, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ma-21",
+        "name": "Es Trenc / Ses Covetes / Salines beach access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Campos",
+        "island": "Mallorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Ma-6040",
+        "road_reference": "approximately km 9.000",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Ma-6040, approximately km 9.000, Campos, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-me-01",
+        "name": "Camí de Tramuntana access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Es Mercadal",
+        "island": "Menorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Me-15",
+        "road_reference": "Es Mercadal – Me-15",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Me-15, Es Mercadal – Me-15, Es Mercadal, Menorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-me-02",
+        "name": "Faro de Cavalleria access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Es Mercadal",
+        "island": "Menorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "CF-3",
+        "road_reference": "Camí de Tramuntana – Faro de Cavalleria",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "CF-3, Camí de Tramuntana – Faro de Cavalleria, Es Mercadal, Menorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-me-03",
+        "name": "El Toro access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Es Mercadal",
+        "island": "Menorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "Me-13",
+        "road_reference": "Es Mercadal – El Toro",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Me-13, Es Mercadal – El Toro, Es Mercadal, Menorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-me-04",
+        "name": "Faro de Punta Nati access and parking",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Ciutadella",
+        "island": "Menorca",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T08:00:00+02:00",
+          "end": null,
+          "time_note": "Vehicle access and parking closed from 08:00."
+        },
+        "description": "Vehicle access to Punta Nati lighthouse and its parking area is closed from 08:00.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "CF-5",
+        "road_reference": "RC-1 – Faro de Punta Nati",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "CF-5, RC-1 – Faro de Punta Nati, Ciutadella, Menorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ib-01",
+        "name": "Cala d'Hort access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Sant Josep de sa Talaia",
+        "island": "Eivissa",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": null,
+        "road_reference": "Cala Vedella local road / Cala d'Hort local road, km 4.300",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Cala d'Hort access, Cala Vedella local road / Cala d'Hort local road, km 4.300, Ibiza, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ib-02",
+        "name": "Cala Comte access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Sant Josep de sa Talaia",
+        "island": "Eivissa",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "EI-701",
+        "road_reference": "km 4.500",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Cala Comte access, EI-701, km 4.500, Ibiza, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ib-03",
+        "name": "Cala Molí access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Sant Josep de sa Talaia",
+        "island": "Eivissa",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": null,
+        "road_reference": "Cala Molí road / Cala Tarida intersection, km 3.600",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Cala Molí access, Cala Molí road / Cala Tarida intersection, km 3.600, Ibiza, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-ib-04",
+        "name": "Cala Bassa access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Sant Josep de sa Talaia",
+        "island": "Eivissa",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the stated control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "EI-702",
+        "road_reference": "EI-702 / Cala Bassa road intersection, km 1.900",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "Cala Bassa access, EI-702, EI-702 / Cala Bassa road intersection, km 1.900, Ibiza, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-fo-01",
+        "name": "Cap de Barbaria / Cala Saona access",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Formentera",
+        "island": "Formentera",
+        "restriction_class": "motor_vehicle_access_control",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-12T21:00:00+02:00",
+          "time_note": "Controls may begin earlier or continue later for safety, congestion or full parking."
+        },
+        "description": "Motor-vehicle access will be closed or regulated at the PM-820-1 control point.",
+        "affected_modes": [
+          "car",
+          "motorcycle",
+          "moped"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": "PM-820-1",
+        "road_reference": "km 2.500, junction toward Cap de Barbaria and Cala Saona",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "official_road_reference_no_coordinates",
+        "map_query": "PM-820-1 km 2.5 Cap de Barbaria Cala Saona, Formentera, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-special-01",
+        "name": "Bosque de Bellver",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Palma",
+        "island": "Mallorca",
+        "restriction_class": "site_closure",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T00:00:00+02:00",
+          "end": "2026-08-12T23:59:59+02:00",
+          "time_note": "Closed all day."
+        },
+        "description": "The forest is closed for the entire day.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "not_published",
+        "map_query": "Bosque de Bellver, Palma, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-special-02",
+        "name": "Santa Ponça access control",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Calvià",
+        "island": "Mallorca",
+        "restriction_class": "capacity_based_access_closure",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-11",
+          "end": null,
+          "time_note": "Device starts 24 hours before the eclipse; access closes when capacity is reached."
+        },
+        "description": "Access is controlled and will close when the official observation zone reaches maximum capacity.",
+        "affected_modes": [
+          "vehicle_access"
+        ],
+        "exemptions": [
+          "residents",
+          "persons with justified accredited travel"
+        ],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "access_may_close_before_arrival",
+        "geometry_quality": "not_published",
+        "map_query": "Santa Ponça, Calvià, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-special-03",
+        "name": "Puig de sa Morisca",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Calvià",
+        "island": "Mallorca",
+        "restriction_class": "site_access_prohibited",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Part of the Santa Ponça device, active from 11 August."
+        },
+        "description": "Public access is not permitted under the Santa Ponça / Calvià eclipse device.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [
+          "residents and justified accredited travel, where applicable"
+        ],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "not_published",
+        "map_query": "Puig de sa Morisca, Calvià, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-special-04",
+        "name": "El Toro viewpoints (Calvià)",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Calvià",
+        "island": "Mallorca",
+        "restriction_class": "site_access_prohibited",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Part of the Santa Ponça device, active from 11 August."
+        },
+        "description": "Public access is not permitted under the Santa Ponça / Calvià eclipse device.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [
+          "residents and justified accredited travel, where applicable"
+        ],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "not_published",
+        "map_query": "El Toro viewpoints (Calvià), Calvià, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-special-05",
+        "name": "Illes Malgrats viewpoints",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Calvià",
+        "island": "Mallorca",
+        "restriction_class": "site_access_prohibited",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Part of the Santa Ponça device, active from 11 August."
+        },
+        "description": "Public access is not permitted under the Santa Ponça / Calvià eclipse device.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [
+          "residents and justified accredited travel, where applicable"
+        ],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "not_published",
+        "map_query": "Illes Malgrats viewpoints, Calvià, Mallorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "bal-special-06",
+        "name": "Ciutadella official observation-zone roads",
+        "autonomous_community": "Illes Balears",
+        "province": "Illes Balears",
+        "municipality": "Ciutadella",
+        "island": "Menorca",
+        "restriction_class": "traffic_closure",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T17:00:00+02:00",
+          "end": null,
+          "time_note": "May start earlier depending on attendance."
+        },
+        "description": "Traffic closes in the official observation zones: Cala en Blanes, Son Oleo–Son Blanc, Cala Blanca zones B and C, and the Cap d'Artrutx seafront.",
+        "affected_modes": [
+          "vehicle_access"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "persons with an accredited home in the restricted zone",
+          "accredited workers",
+          "public transport",
+          "hotel/accommodation guests under published conditions",
+          "restaurant customers with reservation and assured parking",
+          "emergency and essential public services",
+          "other vehicles specifically authorized by the competent authority"
+        ],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "vehicle_access_to_viewing_zones_closed",
+        "geometry_quality": "not_published",
+        "map_query": "Ciutadella official eclipse observation zones, Menorca, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "SEGURIDAD: Medidas de control, restricción y cierre",
+            "publisher": "Govern de les Illes Balears",
+            "url": "https://www.caib.es/webgoib/es/-/mesures-de-control-restricci%C3%B3-i-tancament-3",
+            "tier": "official",
+            "last_updated": "2026-07-31",
+            "source_id": "balearics_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "cat-traffic-01",
+        "name": "AP-7 southbound Martorell–Ulldecona",
+        "autonomous_community": "Catalunya",
+        "province": [
+          "Barcelona",
+          "Tarragona"
+        ],
+        "municipality": null,
+        "island": null,
+        "restriction_class": "heavy_vehicle_circulation_ban",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T14:00:00+02:00",
+          "end": "2026-08-13T00:00:00+02:00"
+        },
+        "description": "Heavy vehicles are prohibited from circulating southbound on the AP-7 between Martorell and Ulldecona.",
+        "affected_modes": [
+          "heavy_goods_vehicle"
+        ],
+        "exemptions": [],
+        "road_code": "AP-7",
+        "road_reference": "Martorell–Ulldecona",
+        "direction": "southbound",
+        "planning_relevance": "passenger_cars_not_directly_restricted",
+        "geometry_quality": "not_published",
+        "map_query": "AP-7 Martorell Ulldecona, Catalonia, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "Dispositiu per l'eclipsi solar",
+            "publisher": "Generalitat de Catalunya",
+            "url": "https://web.gencat.cat/ca/inici/actualitat/dispositiu-eclpisi-solar-12-agost",
+            "tier": "official",
+            "last_updated": "2026-08-01",
+            "source_id": "catalonia_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "cat-traffic-02",
+        "name": "N-340 Vilafranca del Penedès–Ulldecona",
+        "autonomous_community": "Catalunya",
+        "province": [
+          "Barcelona",
+          "Tarragona"
+        ],
+        "municipality": null,
+        "island": null,
+        "restriction_class": "heavy_vehicle_circulation_ban",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T14:00:00+02:00",
+          "end": "2026-08-13T00:00:00+02:00"
+        },
+        "description": "Heavy-vehicle circulation is restricted on the N-340 between Vilafranca del Penedès and Ulldecona. The summary page does not specify direction for this item.",
+        "affected_modes": [
+          "heavy_goods_vehicle"
+        ],
+        "exemptions": [],
+        "road_code": "N-340",
+        "road_reference": "Vilafranca del Penedès–Ulldecona",
+        "direction": "not specified",
+        "planning_relevance": "passenger_cars_not_directly_restricted",
+        "geometry_quality": "not_published",
+        "map_query": "N-340 Vilafranca del Penedès Ulldecona, Catalonia, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "Dispositiu per l'eclipsi solar",
+            "publisher": "Generalitat de Catalunya",
+            "url": "https://web.gencat.cat/ca/inici/actualitat/dispositiu-eclpisi-solar-12-agost",
+            "tier": "official",
+            "last_updated": "2026-08-01",
+            "source_id": "catalonia_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "cat-traffic-03",
+        "name": "Northbound Ulldecona–El Vendrell heavy-vehicle lane rule",
+        "autonomous_community": "Catalunya",
+        "province": "Tarragona",
+        "municipality": null,
+        "island": null,
+        "restriction_class": "heavy_vehicle_lane_speed_overtaking_restriction",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T14:00:00+02:00",
+          "end": "2026-08-13T00:00:00+02:00"
+        },
+        "description": "Northbound heavy vehicles must remain in the right lane, travel at no more than 80 km/h and may not overtake.",
+        "affected_modes": [
+          "heavy_goods_vehicle"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": "Ulldecona–El Vendrell",
+        "direction": "northbound",
+        "planning_relevance": "passenger_cars_not_directly_restricted",
+        "geometry_quality": "not_published",
+        "map_query": "Ulldecona El Vendrell road corridor, Catalonia, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "Dispositiu per l'eclipsi solar",
+            "publisher": "Generalitat de Catalunya",
+            "url": "https://web.gencat.cat/ca/inici/actualitat/dispositiu-eclpisi-solar-12-agost",
+            "tier": "official",
+            "last_updated": "2026-08-01",
+            "source_id": "catalonia_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "cat-access-01",
+        "name": "Municipal access-regulation zone: lower Ebro and mountain sites",
+        "autonomous_community": "Catalunya",
+        "province": [
+          "Tarragona"
+        ],
+        "municipality": [
+          "L'Ampolla",
+          "L'Aldea",
+          "Deltebre",
+          "Sant Jaume d'Enveja",
+          "Amposta",
+          "La Ràpita",
+          "Alforja",
+          "Vilanova de Prades"
+        ],
+        "island": null,
+        "restriction_class": "access_regulation_announced",
+        "status": "confirmed_framework_details_pending",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact municipal control points and hours not published on the regional summary page."
+        },
+        "description": "Special access regulation is announced for l'Ampolla, l'Aldea, Deltebre, Sant Jaume d'Enveja, Amposta, la Ràpita, Alforja and Vilanova de Prades. Dedicated parking and walking routes will be used.",
+        "affected_modes": [
+          "vehicle_access",
+          "parking"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "local_access_controls_expected",
+        "geometry_quality": "municipalities_named_no_control_geometry",
+        "map_query": "L'Ampolla L'Aldea Deltebre Sant Jaume d'Enveja Amposta La Ràpita Alforja Vilanova de Prades, Catalonia, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "Dispositiu per l'eclipsi solar",
+            "publisher": "Generalitat de Catalunya",
+            "url": "https://web.gencat.cat/ca/inici/actualitat/dispositiu-eclpisi-solar-12-agost",
+            "tier": "official",
+            "last_updated": "2026-08-01",
+            "source_id": "catalonia_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "cat-site-01",
+        "name": "Observatori de l'Ebre",
+        "autonomous_community": "Catalunya",
+        "province": "Tarragona",
+        "municipality": "Roquetes",
+        "island": null,
+        "restriction_class": "site_closure",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Closed to the public for the event day."
+        },
+        "description": "The observatory will remain closed to the public because of limited capacity; a live telescope broadcast is planned.",
+        "affected_modes": [
+          "public_entry",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "not_published",
+        "map_query": "Observatori de l'Ebre, Roquetes, Tarragona, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "L’Observatori de l’Ebre tindrà un paper destacat en l’eclipsi solar total",
+            "publisher": "Observatori de l'Ebre / Generalitat de Catalunya",
+            "url": "https://observatoriebre.gencat.cat/en/detalls/noticia/20250527-eclipsi-solar-total-2026",
+            "tier": "official",
+            "last_updated": "2026-04-23",
+            "source_id": "ebre_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "rioja-forest-01",
+        "name": "All forest land in La Rioja",
+        "autonomous_community": "La Rioja",
+        "province": "La Rioja",
+        "municipality": null,
+        "island": null,
+        "restriction_class": "internal_combustion_motor_vehicle_ban",
+        "status": "reported_government_measure",
+        "confidence": "medium_high",
+        "effect": {
+          "start": "2026-08-12T15:00:00+02:00",
+          "end": "2026-08-13T07:00:00+02:00"
+        },
+        "description": "Circulation of internal-combustion motor vehicles on forest land is prohibited.",
+        "affected_modes": [
+          "petrol_vehicle",
+          "diesel_vehicle",
+          "internal_combustion_motorcycle"
+        ],
+        "exemptions": [
+          "access to inhabited settlements",
+          "surveillance services",
+          "two designated observation points"
+        ],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "forest_and_mountain_car_access_prohibited",
+        "geometry_quality": "regionwide_legal_land_class_no_polygon_attached",
+        "map_query": "forest land, La Rioja, Spain",
+        "parent_rule": null,
+        "notes": "The official eclipse portal separately says vehicles must not enter forest tracks, rural roads or unauthorized spaces. The underlying published cadastral/forestry polygon was not attached to the announcement.",
+        "sources": [
+          {
+            "title": "El Gobierno de La Rioja lanza varias medidas extraordinarias para evitar incendios el día del eclipse",
+            "publisher": "Cadena SER Radio Rioja",
+            "url": "https://cadenaser.com/rioja/2026/07/30/el-gobierno-de-la-rioja-lanza-varias-medidas-extraordinarias-para-evitar-incendios-el-dia-del-eclipse-radio-rioja/",
+            "tier": "reputable_media_quoting_government_official",
+            "last_updated": "2026-07-30",
+            "source_id": "larioja_ser"
+          },
+          {
+            "title": "Observación Segura del Eclipse Solar en La Rioja",
+            "publisher": "Gobierno de La Rioja",
+            "url": "https://web.larioja.org/eclipse/",
+            "tier": "official",
+            "last_updated": "2026-08-02",
+            "source_id": "larioja_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "cantabria-fire-01",
+        "name": "Entire territory of Cantabria",
+        "autonomous_community": "Cantabria",
+        "province": "Cantabria",
+        "municipality": null,
+        "island": null,
+        "restriction_class": "fire_related_activity_suspension",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-11T12:00:00+02:00",
+          "end": "2026-08-13T12:00:00+02:00"
+        },
+        "description": "All activities related to the use of fire are suspended as an extraordinary eclipse-related wildfire-prevention measure.",
+        "affected_modes": [
+          "activities_using_fire"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_access_not_banned_activity_only",
+        "geometry_quality": "regionwide_rule_boundary_not_embedded",
+        "map_query": "Cantabria, Spain",
+        "parent_rule": null,
+        "notes": "This is not a general ban on entering forests or mountains.",
+        "sources": [
+          {
+            "title": "Resolución por la que se establecen prohibiciones y suspensiones de determinadas actividades",
+            "publisher": "Gobierno de Cantabria (republished by Noticias Jurídicas)",
+            "url": "https://noticias.juridicas.com/base_datos/CCAA/1003100-r-desarrollo-rural-ganaderia-pesca-y-alimentacion-12-jun-2026-ca-cantabria.html",
+            "tier": "legal_republication",
+            "last_updated": "2026-06-12",
+            "source_id": "cantabria_legal"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "euskadi-hgv-01",
+        "name": "Entire Euskadi road network",
+        "autonomous_community": "País Vasco / Euskadi",
+        "province": null,
+        "municipality": null,
+        "island": null,
+        "restriction_class": "heavy_vehicle_circulation_ban",
+        "status": "confirmed_updated_measure",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T17:00:00+02:00",
+          "end": "2026-08-12T23:59:00+02:00"
+        },
+        "description": "Vehicles or vehicle combinations over 7,500 kg maximum authorized mass may not circulate on the Euskadi road network during the stated period.",
+        "affected_modes": [
+          "vehicle_over_7500kg"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "passenger_cars_not_directly_restricted",
+        "geometry_quality": "road_network_rule_no_geometry",
+        "map_query": "Euskadi road network, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "El Gobierno Vasco limita la restricción de circulación por el eclipse a los vehículos pesados",
+            "publisher": "Gobierno Vasco / Irekia",
+            "url": "https://www.irekia.euskadi.eus/es/news/112148-gobierno-vasco-limita-restriccion-circulacion-por-eclipse-los-vehiculos-pesados-las-horas-mayor-intensidad-trafico-tras-reunirse-con-sector-del-transporte",
+            "tier": "official",
+            "last_updated": "2026-07-24",
+            "source_id": "euskadi_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "navarra-hgv-01",
+        "name": "Public road network of Navarra",
+        "autonomous_community": "Navarra",
+        "province": "Navarra",
+        "municipality": null,
+        "island": null,
+        "restriction_class": "heavy_goods_vehicle_circulation_ban",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start": "2026-08-12T17:00:00+02:00",
+          "end": "2026-08-12T23:59:00+02:00"
+        },
+        "description": "Goods vehicles or combinations over 7,500 kg MMA/MMC may not circulate on Navarra public roads.",
+        "affected_modes": [
+          "goods_vehicle_over_7500kg"
+        ],
+        "exemptions": [
+          "AP-68 km 162.56–166.85 in both directions (La Rioja boundary to La Rioja boundary)",
+          "AP-68 km 201.62–236.98 in both directions (La Rioja boundary to Zaragoza boundary)",
+          "other exemptions in the traffic resolution, where applicable"
+        ],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "passenger_cars_not_directly_restricted",
+        "geometry_quality": "road_network_rule_no_geometry",
+        "map_query": "Navarra public road network, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "El dispositivo de seguridad desplegado para el día del eclipse en Navarra",
+            "publisher": "Gobierno de Navarra",
+            "url": "https://navarramasvoluntaria.navarra.es/es/noticias/el-dispositivo-de-seguridad-desplegado-para-el-dia-del-eclipse-en-navarra-estara-formado-por-1-165-personas",
+            "tier": "official",
+            "last_updated": "2026-07-27",
+            "source_id": "navarra_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "valencia-site-01",
+        "name": "Parc Natural de l'Albufera and Devesa",
+        "autonomous_community": "Comunitat Valenciana",
+        "province": "València",
+        "municipality": "València",
+        "island": null,
+        "restriction_class": "natural_area_closure",
+        "status": "reported_confirmed",
+        "confidence": "medium",
+        "effect": {
+          "start": "2026-08-12T00:00:00+02:00",
+          "end": "2026-08-12T23:59:59+02:00"
+        },
+        "description": "The natural park and Devesa are to remain closed on eclipse day.",
+        "affected_modes": [
+          "public_access",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "named_protected_area_no_official_polygon_attached",
+        "map_query": "Parc Natural de l'Albufera, Valencia, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "Dispositivo de seguridad por el eclipse en València: se cerrará la Albufera",
+            "publisher": "Cadena SER Radio Valencia",
+            "url": "https://cadenaser.com/comunitat-valenciana/2026/07/28/dispositivo-de-seguridad-por-el-eclipse-en-valencia-se-cerrara-la-albufera-y-habra-mas-de-mil-policias-vigilando-radio-valencia/",
+            "tier": "reputable_media_quoting_municipal_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "valencia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "valencia-road-01",
+        "name": "CV-500 through l'Albufera area",
+        "autonomous_community": "Comunitat Valenciana",
+        "province": "València",
+        "municipality": "València",
+        "island": null,
+        "restriction_class": "motor_vehicle_access_restriction",
+        "status": "reported_confirmed",
+        "confidence": "medium",
+        "effect": {
+          "start": "2026-08-12T18:00:00+02:00",
+          "end": null,
+          "time_note": "End time not published in the cited announcement."
+        },
+        "description": "Traffic on the CV-500 is restricted from 18:00, except for accredited residents and emergency/security access.",
+        "affected_modes": [
+          "private_motor_vehicle"
+        ],
+        "exemptions": [
+          "accredited residents",
+          "emergency and security services"
+        ],
+        "road_code": "CV-500",
+        "road_reference": "l'Albufera / El Palmar corridor",
+        "direction": null,
+        "planning_relevance": "private_vehicle_access_restricted",
+        "geometry_quality": "road_corridor_named_no_geometry",
+        "map_query": "CV-500 Albufera El Palmar, Valencia, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "Dispositivo de seguridad por el eclipse en València: se cerrará la Albufera",
+            "publisher": "Cadena SER Radio Valencia",
+            "url": "https://cadenaser.com/comunitat-valenciana/2026/07/28/dispositivo-de-seguridad-por-el-eclipse-en-valencia-se-cerrara-la-albufera-y-habra-mas-de-mil-policias-vigilando-radio-valencia/",
+            "tier": "reputable_media_quoting_municipal_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "valencia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "valencia-control-01",
+        "name": "El Palmar and l'Albufera lake access-control area",
+        "autonomous_community": "Comunitat Valenciana",
+        "province": "València",
+        "municipality": "València",
+        "island": null,
+        "restriction_class": "strict_access_control",
+        "status": "reported_confirmed",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact perimeter and hours not published in the cited announcement."
+        },
+        "description": "Strict access controls are announced for El Palmar and the lake surroundings.",
+        "affected_modes": [
+          "vehicle_access",
+          "public_access"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "access_controls_expected",
+        "geometry_quality": "named_area_no_boundary",
+        "map_query": "El Palmar l'Albufera, Valencia, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "Dispositivo de seguridad por el eclipse en València: se cerrará la Albufera",
+            "publisher": "Cadena SER Radio Valencia",
+            "url": "https://cadenaser.com/comunitat-valenciana/2026/07/28/dispositivo-de-seguridad-por-el-eclipse-en-valencia-se-cerrara-la-albufera-y-habra-mas-de-mil-policias-vigilando-radio-valencia/",
+            "tier": "reputable_media_quoting_municipal_authorities",
+            "last_updated": "2026-07-28",
+            "source_id": "valencia_ser"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "zaragoza-city-01",
+        "name": "Municipality of Zaragoza",
+        "autonomous_community": "Aragón",
+        "province": "Zaragoza",
+        "municipality": "Zaragoza",
+        "island": null,
+        "restriction_class": "temporary_speed_and_lighting_rule",
+        "status": "confirmed",
+        "confidence": "high",
+        "effect": {
+          "start_text": "2026-08-12 20:00 local time",
+          "end_text": "when public street lighting is switched on"
+        },
+        "description": "Maximum speed 30 km/h throughout the municipality and dipped headlights mandatory.",
+        "affected_modes": [
+          "motor_vehicle"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "traffic_rule_not_access_ban",
+        "geometry_quality": "municipal_rule_no_boundary_embedded",
+        "map_query": "Zaragoza municipality, Spain",
+        "parent_rule": null,
+        "notes": null,
+        "sources": [
+          {
+            "title": "Zaragoza prepara un gran dispositivo especial de seguridad, movilidad y acogida turística",
+            "publisher": "Ayuntamiento de Zaragoza",
+            "url": "https://www.zaragoza.es/sede/portal/zaragoza-eclipsa/servicio/noticia/359827",
+            "tier": "official",
+            "last_updated": "2026-07-22",
+            "source_id": "zaragoza_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "zaragoza-bridge-01",
+        "name": "Puente de la Almozara — west side and elevated central promenade",
+        "autonomous_community": "Aragón",
+        "province": "Zaragoza",
+        "municipality": "Zaragoza",
+        "island": null,
+        "restriction_class": "planned_traffic_closure",
+        "status": "planned_not_final",
+        "confidence": "medium",
+        "effect": {
+          "start_text": "approximately 2026-08-12 20:00 local time",
+          "end_text": "when public street lighting is switched on"
+        },
+        "description": "Road traffic closure proposed; bicycles and personal-mobility vehicles also excluded from the elevated central promenade.",
+        "affected_modes": [
+          "motor_vehicle"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "bridge_road_access_expected_closed",
+        "geometry_quality": "named_bridge_no_geometry",
+        "map_query": "Puente de la Almozara — west side and elevated central promenade, Zaragoza, Spain",
+        "parent_rule": null,
+        "notes": "The municipal article uses 'se prevé'/'se propone'; the complete final device will be published nearer 12 August.",
+        "sources": [
+          {
+            "title": "Zaragoza prepara un gran dispositivo especial de seguridad, movilidad y acogida turística",
+            "publisher": "Ayuntamiento de Zaragoza",
+            "url": "https://www.zaragoza.es/sede/portal/zaragoza-eclipsa/servicio/noticia/359827",
+            "tier": "official",
+            "last_updated": "2026-07-22",
+            "source_id": "zaragoza_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "zaragoza-bridge-02",
+        "name": "Puente de Santiago",
+        "autonomous_community": "Aragón",
+        "province": "Zaragoza",
+        "municipality": "Zaragoza",
+        "island": null,
+        "restriction_class": "planned_traffic_closure",
+        "status": "planned_not_final",
+        "confidence": "medium",
+        "effect": {
+          "start_text": "approximately 2026-08-12 20:00 local time",
+          "end_text": "when public street lighting is switched on"
+        },
+        "description": "Road traffic closure proposed; bridge reserved for pedestrians during the device.",
+        "affected_modes": [
+          "motor_vehicle"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "bridge_road_access_expected_closed",
+        "geometry_quality": "named_bridge_no_geometry",
+        "map_query": "Puente de Santiago, Zaragoza, Spain",
+        "parent_rule": null,
+        "notes": "The municipal article uses 'se prevé'/'se propone'; the complete final device will be published nearer 12 August.",
+        "sources": [
+          {
+            "title": "Zaragoza prepara un gran dispositivo especial de seguridad, movilidad y acogida turística",
+            "publisher": "Ayuntamiento de Zaragoza",
+            "url": "https://www.zaragoza.es/sede/portal/zaragoza-eclipsa/servicio/noticia/359827",
+            "tier": "official",
+            "last_updated": "2026-07-22",
+            "source_id": "zaragoza_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "zaragoza-bridge-03",
+        "name": "Puente de Piedra",
+        "autonomous_community": "Aragón",
+        "province": "Zaragoza",
+        "municipality": "Zaragoza",
+        "island": null,
+        "restriction_class": "planned_traffic_closure",
+        "status": "planned_not_final",
+        "confidence": "medium",
+        "effect": {
+          "start_text": "approximately 2026-08-12 20:00 local time",
+          "end_text": "when public street lighting is switched on"
+        },
+        "description": "Road traffic closure proposed; bridge reserved for pedestrians during the device.",
+        "affected_modes": [
+          "motor_vehicle"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "bridge_road_access_expected_closed",
+        "geometry_quality": "named_bridge_no_geometry",
+        "map_query": "Puente de Piedra, Zaragoza, Spain",
+        "parent_rule": null,
+        "notes": "The municipal article uses 'se prevé'/'se propone'; the complete final device will be published nearer 12 August.",
+        "sources": [
+          {
+            "title": "Zaragoza prepara un gran dispositivo especial de seguridad, movilidad y acogida turística",
+            "publisher": "Ayuntamiento de Zaragoza",
+            "url": "https://www.zaragoza.es/sede/portal/zaragoza-eclipsa/servicio/noticia/359827",
+            "tier": "official",
+            "last_updated": "2026-07-22",
+            "source_id": "zaragoza_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "zaragoza-bridge-04",
+        "name": "Puente del Pilar — west side",
+        "autonomous_community": "Aragón",
+        "province": "Zaragoza",
+        "municipality": "Zaragoza",
+        "island": null,
+        "restriction_class": "planned_traffic_closure",
+        "status": "planned_not_final",
+        "confidence": "medium",
+        "effect": {
+          "start_text": "approximately 2026-08-12 20:00 local time",
+          "end_text": "when public street lighting is switched on"
+        },
+        "description": "Road traffic closure proposed; west side reserved for pedestrians.",
+        "affected_modes": [
+          "motor_vehicle"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "bridge_road_access_expected_closed",
+        "geometry_quality": "named_bridge_no_geometry",
+        "map_query": "Puente del Pilar — west side, Zaragoza, Spain",
+        "parent_rule": null,
+        "notes": "The municipal article uses 'se prevé'/'se propone'; the complete final device will be published nearer 12 August.",
+        "sources": [
+          {
+            "title": "Zaragoza prepara un gran dispositivo especial de seguridad, movilidad y acogida turística",
+            "publisher": "Ayuntamiento de Zaragoza",
+            "url": "https://www.zaragoza.es/sede/portal/zaragoza-eclipsa/servicio/noticia/359827",
+            "tier": "official",
+            "last_updated": "2026-07-22",
+            "source_id": "zaragoza_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "zaragoza-walk-01",
+        "name": "Pasarela del Voluntariado",
+        "autonomous_community": "Aragón",
+        "province": "Zaragoza",
+        "municipality": "Zaragoza",
+        "island": null,
+        "restriction_class": "planned_pedestrian_closure",
+        "status": "planned_not_final",
+        "confidence": "medium",
+        "effect": {
+          "start_text": "during the eclipse mobility device on 2026-08-12",
+          "end_text": "not yet published"
+        },
+        "description": "The footbridge is planned to remain closed to pedestrian traffic during the device.",
+        "affected_modes": [
+          "pedestrian"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable",
+        "geometry_quality": "named_bridge_no_geometry",
+        "map_query": "Pasarela del Voluntariado, Zaragoza, Spain",
+        "parent_rule": null,
+        "notes": "Final detailed municipal order is still pending.",
+        "sources": [
+          {
+            "title": "Zaragoza prepara un gran dispositivo especial de seguridad, movilidad y acogida turística",
+            "publisher": "Ayuntamiento de Zaragoza",
+            "url": "https://www.zaragoza.es/sede/portal/zaragoza-eclipsa/servicio/noticia/359827",
+            "tier": "official",
+            "last_updated": "2026-07-22",
+            "source_id": "zaragoza_official"
+          }
+        ],
+        "last_verified": "2026-08-03T08:40:00+02:00"
+      }
+    }
+  ]
+}
