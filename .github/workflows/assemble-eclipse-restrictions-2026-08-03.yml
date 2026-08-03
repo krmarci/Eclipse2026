@@ -1,4 +1,4 @@
-name: Assemble eclipse restriction datasets 2026-08-03
+name: Build eclipse restriction snapshot 2026-08-03
 
 on:
   push:
@@ -9,33 +9,67 @@ permissions:
   contents: write
 
 jobs:
-  assemble:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Reconstruct and validate
+      - name: Create dated snapshot and validate
         shell: bash
         run: |
           set -euo pipefail
-          upload_dir='.github/eclipse-restrictions-upload-2026-08-03'
-          output_dir='data/restrictions'
-          mkdir -p "$output_dir"
-          cat "$upload_dir"/geojson.part.* | base64 --decode > "$output_dir/spain_eclipse_restrictions_2026-08-03.geojson"
-          cat "$upload_dir"/csv.part.* | base64 --decode > "$output_dir/spain_eclipse_restrictions_2026-08-03.csv"
           python - <<'PY'
           import csv, json
           from pathlib import Path
-          root=Path('data/restrictions')
-          gj=json.loads((root/'spain_eclipse_restrictions_2026-08-03.geojson').read_text(encoding='utf-8'))
-          with (root/'spain_eclipse_restrictions_2026-08-03.csv').open(encoding='utf-8-sig',newline='') as f:
-              rows=list(csv.DictReader(f))
-          assert gj['type']=='FeatureCollection'
-          assert len(gj['features'])==len(rows)==83
-          print('Validated 83 records')
+
+          root = Path('data/restrictions')
+          source_geojson = root / 'spain_eclipse_restrictions_2026-08-02.geojson'
+          target_geojson = root / 'spain_eclipse_restrictions_2026-08-03.geojson'
+          target_csv = root / 'spain_eclipse_restrictions_2026-08-03.csv'
+          timestamp = '2026-08-03T08:40:00+02:00'
+
+          data = json.loads(source_geojson.read_text(encoding='utf-8'))
+          data['metadata']['snapshot_time'] = timestamp
+          data['metadata']['important_limit'] = (
+              'This is a snapshot, not a guarantee of completeness on eclipse day. '
+              'No material changes were found in the fresh review on 3 August 2026; '
+              'wildfire orders, police controls, capacity closures and municipal measures '
+              'can still change at short notice.'
+          )
+          for feature in data['features']:
+              feature['properties']['last_verified'] = timestamp
+          target_geojson.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+
+          fields = ['id','name','autonomous_community','province','municipality','island','restriction_class','status','confidence','effect_start','effect_end','effect_date','effect_time_note','description','affected_modes','exemptions','road_code','road_reference','direction','planning_relevance','geometry_type','geometry_quality','map_query','source_urls','source_publishers','last_verified','notes']
+          with target_csv.open('w', encoding='utf-8-sig', newline='') as handle:
+              writer = csv.DictWriter(handle, fieldnames=fields)
+              writer.writeheader()
+              for feature in data['features']:
+                  p = feature['properties']; effect = p.get('effect') or {}; geometry = feature.get('geometry')
+                  writer.writerow({
+                      'id': p['id'], 'name': p['name'], 'autonomous_community': p['autonomous_community'],
+                      'province': json.dumps(p.get('province'), ensure_ascii=False) if isinstance(p.get('province'), list) else (p.get('province') or ''),
+                      'municipality': json.dumps(p.get('municipality'), ensure_ascii=False) if isinstance(p.get('municipality'), list) else (p.get('municipality') or ''),
+                      'island': p.get('island') or '', 'restriction_class': p['restriction_class'], 'status': p['status'], 'confidence': p['confidence'],
+                      'effect_start': effect.get('start') or effect.get('start_text') or '', 'effect_end': effect.get('end') or effect.get('end_text') or '',
+                      'effect_date': effect.get('date') or '', 'effect_time_note': effect.get('time_note') or '', 'description': p['description'],
+                      'affected_modes': '; '.join(p.get('affected_modes') or []), 'exemptions': '; '.join(p.get('exemptions') or []),
+                      'road_code': p.get('road_code') or '', 'road_reference': p.get('road_reference') or '', 'direction': p.get('direction') or '',
+                      'planning_relevance': p.get('planning_relevance') or '', 'geometry_type': geometry.get('type') if geometry else '',
+                      'geometry_quality': p.get('geometry_quality') or '', 'map_query': p.get('map_query') or '',
+                      'source_urls': '; '.join(s['url'] for s in p.get('sources') or []), 'source_publishers': '; '.join(s['publisher'] for s in p.get('sources') or []),
+                      'last_verified': timestamp, 'notes': p.get('notes') or ''
+                  })
+
+          checked = json.loads(target_geojson.read_text(encoding='utf-8'))
+          with target_csv.open(encoding='utf-8-sig', newline='') as handle:
+              rows = list(csv.DictReader(handle))
+          assert checked['type'] == 'FeatureCollection'
+          assert len(checked['features']) == len(rows) == 83
+          print('Validated 83 GeoJSON features and 83 CSV rows')
           PY
-      - name: Commit datasets
+      - name: Commit snapshot
         shell: bash
         run: |
           set -euo pipefail
