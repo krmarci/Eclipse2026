@@ -1,0 +1,72 @@
+name: Build restriction snapshot 2026-08-04
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/restriction-snapshot-2026-08-04.trigger
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create and validate dated snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import csv
+          import json
+          from pathlib import Path
+
+          root = Path('data/restrictions')
+          previous_geo = root / 'spain_eclipse_restrictions_2026-08-03.geojson'
+          previous_csv = root / 'spain_eclipse_restrictions_2026-08-03.csv'
+          current_geo = root / 'spain_eclipse_restrictions_2026-08-04.geojson'
+          current_csv = root / 'spain_eclipse_restrictions_2026-08-04.csv'
+          timestamp = '2026-08-04T08:53:51+02:00'
+
+          data = json.loads(previous_geo.read_text(encoding='utf-8'))
+          data['metadata']['snapshot_time'] = timestamp
+          for feature in data['features']:
+              feature['properties']['last_verified'] = timestamp
+          current_geo.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+
+          with previous_csv.open('r', encoding='utf-8-sig', newline='') as handle:
+              reader = csv.DictReader(handle)
+              rows = list(reader)
+              fieldnames = reader.fieldnames
+          for row in rows:
+              row['last_verified'] = timestamp
+          with current_csv.open('w', encoding='utf-8-sig', newline='') as handle:
+              writer = csv.DictWriter(handle, fieldnames=fieldnames)
+              writer.writeheader()
+              writer.writerows(rows)
+
+          parsed = json.loads(current_geo.read_text(encoding='utf-8'))
+          with current_csv.open('r', encoding='utf-8-sig', newline='') as handle:
+              csv_count = sum(1 for _ in csv.DictReader(handle))
+          geo_count = len(parsed['features'])
+          if parsed.get('type') != 'FeatureCollection' or geo_count != csv_count or geo_count != 83:
+              raise SystemExit(f'Validation failed: GeoJSON={geo_count}, CSV={csv_count}')
+          print(f'Validated {geo_count} matching records')
+          PY
+
+      - name: Commit snapshot and remove temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/restriction-snapshot-2026-08-04.trigger
+          rm -f .github/workflows/build-restriction-snapshot-2026-08-04.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/restrictions .github/restriction-snapshot-2026-08-04.trigger .github/workflows/build-restriction-snapshot-2026-08-04.yml
+          git commit -m 'Update eclipse restriction datasets 2026-08-04'
+          git push
