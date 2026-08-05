@@ -4,7 +4,7 @@
   "metadata": {
     "snapshot_time": "2026-08-05T08:48:46+02:00",
     "scope": "Published restrictions and announced controls relevant to reaching or using eclipse-viewing locations in Spain's 12 August 2026 eclipse corridor.",
-    "important_limit": "This is a snapshot, not a guarantee of completeness on eclipse day. No material changes were found in the fresh review on 5 August 2026; wildfire orders, police controls, capacity closures and municipal measures can still change at short notice.",
+    "important_limit": "This is a snapshot, not a guarantee of completeness on eclipse day. A newly reported access restriction at Valdeloshielos (Tres Cantos) was added on 5 August 2026; wildfire orders, police controls, capacity closures and municipal measures can still change at short notice.",
     "geometry_policy": "GeoJSON geometry is null when the issuing authority did not publish a polygon/coordinate or when geocoding would risk falsely narrowing a legal restriction. Use properties.map_query, road_code and road_reference for geocoding or matching to an authoritative road/land dataset.",
     "status_policy": {
       "confirmed": "Published by an official authority.",
@@ -51,7 +51,7 @@
       },
       {
         "community": "Comunidad de Madrid",
-        "result": "No fixed eclipse-day access/area closure located as of snapshot."
+        "result": "Valdeloshielos access restriction and cancellation of the municipal eclipse event included; no regionwide closure found."
       },
       {
         "community": "Castilla-La Mancha",
@@ -158,6 +158,13 @@
         "url": "https://cadenaser.com/comunitat-valenciana/2026/07/28/dispositivo-de-seguridad-por-el-eclipse-en-valencia-se-cerrara-la-albufera-y-habra-mas-de-mil-policias-vigilando-radio-valencia/",
         "tier": "reputable_media_quoting_municipal_authorities",
         "last_updated": "2026-07-28"
+      },
+      "trescantos_ser": {
+        "title": "Suspendidas las actividades del eclipse en Tres Cantos por el riesgo de incendio",
+        "publisher": "Cadena SER Madrid Norte",
+        "url": "https://cadenaser.com/cmadrid/2026/08/03/suspendidas-las-actividades-del-eclipse-en-tres-cantos-por-el-riesgo-de-incendio-ser-madrid-norte/",
+        "tier": "reputable_media_quoting_municipal_authority",
+        "last_updated": "2026-08-03"
       }
     }
   },
@@ -4519,6 +4526,53 @@
             "tier": "official",
             "last_updated": "2026-07-22",
             "source_id": "zaragoza_official"
+          }
+        ],
+        "last_verified": "2026-08-05T08:48:46+02:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "mad-tc-01",
+        "name": "Finca de Valdeloshielos",
+        "autonomous_community": "Comunidad de Madrid",
+        "province": "Madrid",
+        "municipality": "Tres Cantos",
+        "island": null,
+        "restriction_class": "site_access_restriction",
+        "status": "reported_confirmed",
+        "confidence": "medium",
+        "effect": {
+          "date": "2026-08-12",
+          "start": null,
+          "end": null,
+          "time_note": "Exact access-control hours and perimeter were not published in the located report."
+        },
+        "description": "The municipal eclipse activities were cancelled and access to the Valdeloshielos estate will be restricted because of high wildfire risk and environmental sensitivity.",
+        "affected_modes": [
+          "pedestrian",
+          "vehicle_access",
+          "eclipse_observation"
+        ],
+        "exemptions": [],
+        "road_code": null,
+        "road_reference": null,
+        "direction": null,
+        "planning_relevance": "viewing_location_unavailable_or_access_restricted",
+        "geometry_quality": "authority_named_place_no_boundary",
+        "map_query": "Finca de Valdeloshielos, Tres Cantos, Madrid, Spain",
+        "parent_rule": null,
+        "notes": "Primary municipal order/page was not located; restriction is reported by Cadena SER as an Ayuntamiento de Tres Cantos decision. Do not infer a precise boundary.",
+        "sources": [
+          {
+            "title": "Suspendidas las actividades del eclipse en Tres Cantos por el riesgo de incendio",
+            "publisher": "Cadena SER Madrid Norte",
+            "url": "https://cadenaser.com/cmadrid/2026/08/03/suspendidas-las-actividades-del-eclipse-en-tres-cantos-por-el-riesgo-de-incendio-ser-madrid-norte/",
+            "tier": "reputable_media_quoting_municipal_authority",
+            "last_updated": "2026-08-03",
+            "source_id": "trescantos_ser"
           }
         ],
         "last_verified": "2026-08-05T08:48:46+02:00"
