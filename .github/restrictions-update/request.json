@@ -1,0 +1,9 @@
+{
+  "date": "2026-08-05",
+  "timestamp": "2026-08-05T08:44:30+02:00",
+  "previous_geojson": "data/restrictions/spain_eclipse_restrictions_2026-08-04.geojson",
+  "expected_records": 84,
+  "changes": [
+    "Add Valdeloshielos access restriction and cancellation of the municipal eclipse event in Tres Cantos."
+  ]
+}
