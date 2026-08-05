@@ -1,0 +1,93 @@
+name: Update eclipse restriction snapshot 2026-08-05
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/eclipse-restrictions-2026-08-05/READY
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build and validate snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import csv, json
+          from pathlib import Path
+
+          root = Path('data/restrictions')
+          src = root / 'spain_eclipse_restrictions_2026-08-04.geojson'
+          outg = root / 'spain_eclipse_restrictions_2026-08-05.geojson'
+          outc = root / 'spain_eclipse_restrictions_2026-08-05.csv'
+          ts = '2026-08-05T08:48:46+02:00'
+
+          data = json.loads(src.read_text(encoding='utf-8'))
+          data['metadata']['snapshot_time'] = ts
+          data['metadata']['important_limit'] = (
+              'This is a snapshot, not a guarantee of completeness on eclipse day. '
+              'No material changes were found in the fresh review on 5 August 2026; '
+              'wildfire orders, police controls, capacity closures and municipal measures '
+              'can still change at short notice.'
+          )
+          for feature in data['features']:
+              feature['properties']['last_verified'] = ts
+          outg.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          fields = ['id','name','autonomous_community','province','municipality','island',
+                    'restriction_class','status','confidence','effect_start','effect_end',
+                    'effect_date','effect_time_note','description','affected_modes','exemptions',
+                    'road_code','road_reference','direction','planning_relevance','geometry_type',
+                    'geometry_quality','map_query','source_urls','source_publishers','last_verified','notes']
+          with outc.open('w', encoding='utf-8-sig', newline='') as handle:
+              writer = csv.DictWriter(handle, fieldnames=fields)
+              writer.writeheader()
+              for feature in data['features']:
+                  p = feature['properties']; effect = p.get('effect') or {}
+                  sources = p.get('sources') or []; geom = feature.get('geometry')
+                  writer.writerow({
+                      'id': p.get('id'), 'name': p.get('name'),
+                      'autonomous_community': p.get('autonomous_community'),
+                      'province': p.get('province'), 'municipality': p.get('municipality'),
+                      'island': p.get('island'), 'restriction_class': p.get('restriction_class'),
+                      'status': p.get('status'), 'confidence': p.get('confidence'),
+                      'effect_start': effect.get('start'), 'effect_end': effect.get('end'),
+                      'effect_date': effect.get('date'), 'effect_time_note': effect.get('time_note'),
+                      'description': p.get('description'),
+                      'affected_modes': '; '.join(p.get('affected_modes') or []),
+                      'exemptions': '; '.join(p.get('exemptions') or []),
+                      'road_code': p.get('road_code'), 'road_reference': p.get('road_reference'),
+                      'direction': p.get('direction'), 'planning_relevance': p.get('planning_relevance'),
+                      'geometry_type': geom.get('type') if isinstance(geom, dict) else '',
+                      'geometry_quality': p.get('geometry_quality'), 'map_query': p.get('map_query'),
+                      'source_urls': '; '.join(s.get('url','') for s in sources),
+                      'source_publishers': '; '.join(dict.fromkeys(s.get('publisher','') for s in sources)),
+                      'last_verified': p.get('last_verified'), 'notes': p.get('notes')
+                  })
+
+          check = json.loads(outg.read_text(encoding='utf-8'))
+          with outc.open('r', encoding='utf-8-sig', newline='') as handle:
+              rows = list(csv.DictReader(handle))
+          if check.get('type') != 'FeatureCollection' or len(check.get('features', [])) != len(rows):
+              raise SystemExit('GeoJSON/CSV validation failed')
+          print(f"Validated {len(rows)} records")
+          PY
+      - name: Commit snapshot and clean temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .github/eclipse-restrictions-2026-08-05
+          rm -f .github/workflows/update-eclipse-restrictions-2026-08-05.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/restrictions .github/eclipse-restrictions-2026-08-05 .github/workflows/update-eclipse-restrictions-2026-08-05.yml
+          git commit -m 'Update eclipse restriction datasets 2026-08-05'
+          git push
