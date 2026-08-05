@@ -1,0 +1,82 @@
+name: Add Valdeloshielos restriction 2026-08-05
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/eclipse-restrictions-2026-08-05-fix/READY
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Add restriction and validate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import csv, json
+          from pathlib import Path
+          root=Path('data/restrictions')
+          gp=root/'spain_eclipse_restrictions_2026-08-05.geojson'
+          cp=root/'spain_eclipse_restrictions_2026-08-05.csv'
+          ts='2026-08-05T08:48:46+02:00'
+          data=json.loads(gp.read_text(encoding='utf-8'))
+          data['metadata']['important_limit']=('This is a snapshot, not a guarantee of completeness on eclipse day. '
+            'A newly reported access restriction at Valdeloshielos (Tres Cantos) was added on 5 August 2026; '
+            'wildfire orders, police controls, capacity closures and municipal measures can still change at short notice.')
+          data['metadata']['source_registry']['trescantos_ser']={
+            'title':'Suspendidas las actividades del eclipse en Tres Cantos por el riesgo de incendio',
+            'publisher':'Cadena SER Madrid Norte',
+            'url':'https://cadenaser.com/cmadrid/2026/08/03/suspendidas-las-actividades-del-eclipse-en-tres-cantos-por-el-riesgo-de-incendio-ser-madrid-norte/',
+            'tier':'reputable_media_quoting_municipal_authority','last_updated':'2026-08-03'}
+          for item in data['metadata'].get('jurisdictions_reviewed',[]):
+            if item.get('community')=='Comunidad de Madrid':
+              item['result']='Valdeloshielos access restriction and cancellation of the municipal eclipse event included; no regionwide closure found.'
+          ids={f['properties']['id'] for f in data['features']}
+          if 'mad-tc-01' not in ids:
+            data['features'].append({
+              'type':'Feature','geometry':None,
+              'properties':{
+                'id':'mad-tc-01','name':'Finca de Valdeloshielos','autonomous_community':'Comunidad de Madrid',
+                'province':'Madrid','municipality':'Tres Cantos','island':None,
+                'restriction_class':'site_access_restriction','status':'reported_confirmed','confidence':'medium',
+                'effect':{'date':'2026-08-12','start':None,'end':None,'time_note':'Exact access-control hours and perimeter were not published in the located report.'},
+                'description':'The municipal eclipse activities were cancelled and access to the Valdeloshielos estate will be restricted because of high wildfire risk and environmental sensitivity.',
+                'affected_modes':['pedestrian','vehicle_access','eclipse_observation'],'exemptions':[],
+                'road_code':None,'road_reference':None,'direction':None,
+                'planning_relevance':'viewing_location_unavailable_or_access_restricted',
+                'geometry_quality':'authority_named_place_no_boundary','map_query':'Finca de Valdeloshielos, Tres Cantos, Madrid, Spain',
+                'parent_rule':None,'notes':'Primary municipal order/page was not located; restriction is reported by Cadena SER as an Ayuntamiento de Tres Cantos decision. Do not infer a precise boundary.',
+                'sources':[{'title':'Suspendidas las actividades del eclipse en Tres Cantos por el riesgo de incendio','publisher':'Cadena SER Madrid Norte','url':'https://cadenaser.com/cmadrid/2026/08/03/suspendidas-las-actividades-del-eclipse-en-tres-cantos-por-el-riesgo-de-incendio-ser-madrid-norte/','tier':'reputable_media_quoting_municipal_authority','last_updated':'2026-08-03','source_id':'trescantos_ser'}],
+                'last_verified':ts}}
+            )
+          gp.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          fields=['id','name','autonomous_community','province','municipality','island','restriction_class','status','confidence','effect_start','effect_end','effect_date','effect_time_note','description','affected_modes','exemptions','road_code','road_reference','direction','planning_relevance','geometry_type','geometry_quality','map_query','source_urls','source_publishers','last_verified','notes']
+          with cp.open('w',encoding='utf-8-sig',newline='') as h:
+            w=csv.DictWriter(h,fieldnames=fields); w.writeheader()
+            for f in data['features']:
+              p=f['properties']; e=p.get('effect') or {}; ss=p.get('sources') or []; g=f.get('geometry')
+              w.writerow({'id':p.get('id'),'name':p.get('name'),'autonomous_community':p.get('autonomous_community'),'province':p.get('province'),'municipality':p.get('municipality'),'island':p.get('island'),'restriction_class':p.get('restriction_class'),'status':p.get('status'),'confidence':p.get('confidence'),'effect_start':e.get('start'),'effect_end':e.get('end'),'effect_date':e.get('date'),'effect_time_note':e.get('time_note'),'description':p.get('description'),'affected_modes':'; '.join(p.get('affected_modes') or []),'exemptions':'; '.join(p.get('exemptions') or []),'road_code':p.get('road_code'),'road_reference':p.get('road_reference'),'direction':p.get('direction'),'planning_relevance':p.get('planning_relevance'),'geometry_type':g.get('type') if isinstance(g,dict) else '','geometry_quality':p.get('geometry_quality'),'map_query':p.get('map_query'),'source_urls':'; '.join(s.get('url','') for s in ss),'source_publishers':'; '.join(dict.fromkeys(s.get('publisher','') for s in ss)),'last_verified':p.get('last_verified'),'notes':p.get('notes')})
+          check=json.loads(gp.read_text(encoding='utf-8'))
+          with cp.open('r',encoding='utf-8-sig',newline='') as h: rows=list(csv.DictReader(h))
+          assert check['type']=='FeatureCollection' and len(check['features'])==len(rows)==84
+          print('Validated 84 records')
+          PY
+      - name: Commit corrected snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .github/eclipse-restrictions-2026-08-05-fix
+          rm -f .github/workflows/fix-eclipse-restrictions-2026-08-05.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/restrictions .github/eclipse-restrictions-2026-08-05-fix .github/workflows/fix-eclipse-restrictions-2026-08-05.yml
+          git commit -m 'Add Valdeloshielos eclipse access restriction'
+          git push
